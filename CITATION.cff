@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "EQGAT-diff in a property-driven molecular design loop on OE62"
+abstract: >-
+  Code for replacing the G-SchNet generator in a closed-loop property-driven
+  molecular design workflow with EQGAT-diff, an E(3)-equivariant diffusion
+  model, while holding the OE62 dataset and the SchNet-style property
+  surrogate fixed.
+type: software
+authors:
+  - family-names: Zhong
+    given-names: Jiling
+    email: jzhong@troy.edu
+    affiliation: "Department of Computer Science, Troy University, AL, USA"
+  - family-names: Momin
+    given-names: Ayan
+    email: amomin@troy.edu
+    affiliation: "Department of Computer Science, Troy University, AL, USA"
+license: MIT
+keywords:
+  - molecular generation
+  - equivariant diffusion
+  - generative models
+  - OE62
+  - inverse design
+references:
+  - type: article
+    title: >-
+      High-throughput property-driven generative design of functional
+      organic molecules
+    authors:
+      - family-names: Westermayr
+        given-names: Julia
+      - family-names: Gilkes
+        given-names: Joe
+      - family-names: Barrett
+        given-names: Rhyan
+      - family-names: Maurer
+        given-names: "Reinhard J."
+    year: 2022
+    url: "https://arxiv.org/abs/2207.01476"
+  - type: article
+    title: >-
+      Navigating the design space of equivariant diffusion-based generative
+      models for de novo 3D molecule generation
+    authors:
+      - family-names: Le
+        given-names: Tuan
+      - family-names: Cremer
+        given-names: Julian
+      - family-names: "Noé"
+        given-names: Frank
+      - family-names: Clevert
+        given-names: "Djork-Arné"
+      - family-names: "Schütt"
+        given-names: "Kristof T."
+    year: 2023
+    url: "https://arxiv.org/abs/2309.17296"

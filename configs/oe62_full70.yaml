@@ -1,0 +1,33 @@
+# EQGAT-diff on OE62, molecules up to 70 heavy-atom-inclusive atoms.
+# Consumed by the upstream `experiments/run_train.py --conf <this file>`.
+#
+# Measured on one NVIDIA T4: 4 min 08 s per epoch, 7 h 05 m for 100 epochs.
+# Resulting model: 824k parameters.
+#
+# Edit the two paths below to match your checkout.
+
+dataset: oe62
+dataset_root: /path/to/eqgat-diff/data/oe62
+save_dir: /path/to/runs/oe62_full70
+id: 0
+
+test_interval: 100000
+num_epochs: 100
+
+# Architecture
+sdim: 128          # invariant (scalar) node feature width
+vdim: 32           # equivariant (vector) node feature width
+num_layers: 6
+edim: 32           # edge feature width
+rbf_dim: 32        # radial basis expansion size
+
+batch_size: 16
+inference_batch_size: 16
+num_workers: 4     # matches Kaggle's core count
+lr: 0.0005
+
+continuous: false            # discrete diffusion on atom and bond types
+diffusion_pretraining: false
+remove_hs: false             # OE62 geometries are all-atom
+use_adaptive_loader: false
+select_train_subset: false

@@ -1,0 +1,24 @@
+# These scripts are meant to run inside the EQGAT-diff conda environment
+# (environment.yml in https://github.com/tuanle618/eqgat-diff), which already
+# provides torch, torch-geometric, rdkit and pytorch-lightning with mutually
+# compatible CUDA builds. Installing torch from PyPI on top of that
+# environment will usually break it.
+#
+# Versions below are what this work was run and measured with.
+
+ase==3.22.1
+rdkit==2023.9.5
+numpy>=1.24,<2.0
+tqdm>=4.65
+scikit-learn>=1.3          # analyze_generated.py only (PCA, KMeans)
+
+# Provided by the EQGAT-diff environment; listed for reference, not to be
+# pip-installed over a working conda install:
+#   torch==2.0.1
+#   torch-geometric==2.4.0
+#   pytorch-lightning==2.0.9
+#
+# Optional: synthetic accessibility scoring in analyze_generated.py imports
+# `sascorer` from RDKit's Contrib/SA_Score directory. It is shipped with RDKit
+# but is not importable by default; the script adds it to sys.path and falls
+# back to skipping SA scores if it cannot be found.
